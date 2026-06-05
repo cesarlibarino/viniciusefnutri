@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinicius Alves | Emagrecimento Definitivo e Performance</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --dark-bg: #111418; /* Fundo escuro premium */
+            --card-bg: #1b1f24; /* Background dos blocos */
+            --primary-gold: #d4af37; /* Dourado de alta autoridade */
+            --primary-hover: #bfa030;
+            --text-main: #ffffff;
+            --text-muted: #94a3b8;
+            --accent-blue: #38bdf8; /* Toque esportivo/ciência */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-main);
+            background-color: var(--dark-bg);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background-color: var(--primary-gold);
+            color: #000;
+            padding: 18px 36px;
+            border-radius: 6px; /* Design mais quadrado/robusto */
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.25);
+            text-align: center;
+        }
+
+        .btn-cta:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        /* --- HERO SECTION --- */
+        header {
+            padding: 100px 0 80px 0;
+            background: radial-gradient(circle at 80% 20%, #1e2530 0%, var(--dark-bg) 70%);
+            position: relative;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .hero-text h1 span {
+            color: var(--primary-gold);
+        }
+
+        .hero-text .highlight-box {
+            background-color: rgba(56, 189, 248, 0.1);
+            border-left: 4px solid var(--accent-blue);
+            padding: 15px 20px;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #e2e8f0;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            margin-bottom: 35px;
+            color: var(--text-muted);
+        }
+
+        .hero-img {
+            text-align: center;
+        }
+
+        .hero-img img {
+            width: 100%;
+            max-width: 360px;
+            height: auto;
+            border-radius: 12px;
+            border: 2px solid rgba(255,255,255,0.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        /* --- O PROBLEMA / QUEBRA --- */
+        .problem-section {
+            padding: 80px 0;
+            background-color: #0b0d10;
+            text-align: center;
+        }
+
+        .problem-box {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            padding: 50px 40px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .problem-box h2 {
+            font-size: 2.2rem;
+            color: #ef4444; /* Vermelho focado na dor */
+            margin-bottom: 20px;
+        }
+
+        .problem-box p {
+            font-size: 1.2rem;
+            color: var(--text-main);
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .problem-box .solution-statement {
+            font-size: 1.5rem;
+            font-family: 'Oswald', sans-serif;
+            color: var(--primary-gold);
+            text-transform: uppercase;
+            margin-top: 30px;
+            font-weight: 600;
+        }
+
+        /* --- PILARES DA METODOLOGIA --- */
+        .pillars {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.6rem;
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .pillar-card {
+            background-color: var(--card-bg);
+            padding: 45px 30px;
+            border-radius: 8px;
+            border-top: 4px solid var(--primary-gold);
+            transition: transform 0.3s ease;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .pillar-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .pillar-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        /* --- SEÇÃO INTERAÇÃO / METODOLOGIA --- */
+        .methodology {
+            padding: 90px 0;
+            background-color: #0b0d10;
+        }
+
+        .method-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .method-img img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
+
+        .method-list .item {
+            margin-bottom: 30px;
+        }
+
+        .method-list .item h4 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.3rem;
+            color: var(--primary-gold);
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .method-list .item p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* --- SOBRE O EXPERT --- */
+        .about {
+            padding: 100px 0;
+        }
+
+        .about-content {
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content h2 {
+            font-size: 2.6rem;
+            margin-bottom: 30px;
+        }
+
+        .about-content p {
+            font-size: 1.15rem;
+            color: #cbd5e1;
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+
+        /* --- CALL TO ACTION FINAL --- */
+        .cta-final {
+            padding: 100px 0;
+            background: linear-gradient(rgba(17, 20, 24, 0.9), rgba(17, 20, 24, 0.9)), url('consulta.jpg') no-repeat center/cover;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .cta-final h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-final p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        footer {
+            background-color: #07080a;
+            color: var(--text-muted);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255,255,255,0.02);
+        }
+
+        /* --- RESPONSIVIDADE --- */
+        @media (max-width: 768px) {
+            .hero-grid, .pillars-grid, .method-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .hero-text {
+                text-align: center;
+            }
+            .hero-text h1 {
+                font-size: 2.6rem;
+            }
+            .hero-img {
+                order: -1;
+            }
+            .hero-img img {
+                max-width: 280px;
+            }
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <header>
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <h1>Chega de efeito sanfona. É hora do seu <span>Emagrecimento Definitivo</span></h1>
+                <div class="highlight-box">
+                    Nutrição • Educação Física • Medicina
+                </div>
+                <p>Muitas pessoas passam a vida lutando contra a balança por estarem presas a estratégias genéricas. Meu papel é cruzar a ciência da nutrição, do treinamento e da medicina para construir o último método que você vai precisar na vida.</p>
+                <a href="https://api.whatsapp.com/send/?phone=32988452559&text&type=phone_number&app_absent=0&utm_source=ig" class="btn-cta" target="_blank">Agendar Minha Consulta</a>
+            </div>
+            <div class="hero-img">
+                <!-- Foto de perfil do Vinicius extraída da imagem image_7c63c4.png -->
+                <img src="expert.jpg" alt="Vinicius Alves | Nutricionista">
+            </div>
+        </div>
+    </header>
+
+    <!-- SEÇÃO DA QUEBRA DA DOR (BIO) -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="problem-box">
+                <h2>Você já emagreceu e voltou tudo de novo?</h2>
+                <p>Se você já passou por isso, escute bem: <strong>o problema nunca foi você.</strong></p>
+                <p>O erro está em métodos ultrapassados, restrições extremas que destroem seu metabolismo e a falta de alinhamento com a sua fisiologia real.</p>
+                <div class="solution-statement">Chegou a hora de mudar o método.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PILARES DE AUTORIDADE TRIPLICADA -->
+    <section class="pillars">
+        <div class="container">
+            <div class="section-header">
+                <h2>A Tríade da Alta Performance</h2>
+                <p>Por que a nossa abordagem entrega resultados onde os outros falham?</p>
+            </div>
+            
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <h3>Nutrição Científica</h3>
+                    <p>Planejamento alimentar estratégico focado na queima de gordura real, sem passar fome e sem cortar o que você gosta de forma radical.</p>
+                </div>
+                <div class="pillar-card">
+                    <h3>Fisiologia do Exercício</h3>
+                    <p>Otimização metabólica. Ajustamos a sua alimentação para potencializar seu rendimento no treino e acelerar o gasto calórico diário.</p>
+                </div>
+                <div class="pillar-card">
+                    <h3>Visão Clínica Integrada</h3>
+                    <p>Análise detalhada de marcadores hormonais e metabólicos. Tratamos a causa fisiológica que bloqueia o seu emagrecimento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- METODOLOGIA COORDENADA -->
+    <section class="methodology">
+        <div class="container method-grid">
+            <div class="method-img">
+                <img src="consulta.jpg" alt="Metodologia Avançada Vinicius Alves">
+            </div>
+            <div class="method-list">
+                <h2 style="font-size: 2.2rem; margin-bottom: 35px;">Como Funciona o Método</h2>
+                
+                <div class="item">
+                    <h4>1. Diagnóstico de Bloqueios Metabólicos</h4>
+                    <p>Avaliamos exames laboratoriais e histórico clínico para identificar o que está travando sua queima de gordura.</p>
+                </div>
+
+                <div class="item">
+                    <h4>2. Protocolo de Transição Individualizado</h4>
+                    <p>Montagem de um plano alimentar que se adapta ao seu estilo de vida atual, e não o contrário.</p>
+                </div>
+
+                <div class="item">
+                    <h4>3. Blindagem de Resultados</h4>
+                    <p>Ajustes progressivos para evitar o efeito platô, garantindo que o peso perdido nunca mais volte.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE O EXPERT -->
+    <section class="about">
+        <div class="container about-content">
+            <h2>Quem é Vinicius Alves?</h2>
+            <p>Com forte atuação em Juiz de Fora, transformo a vida de pacientes unindo a precisão da Nutrição, a base da Educação Física e o olhar aprofundado da Medicina. Minha missão não é te passar uma folha com alimentos permitidos, mas construir junto com você uma engenharia metabólica capaz de entregar o corpo e a saúde que você busca de forma definitiva.</p>
+        </div>
+    </section>
+
+    <!-- CTA FINAL BANNER -->
+    <section class="cta-final">
+        <div class="container">
+            <h2>Construa o seu melhor shape</h2>
+            <p>Atendimentos presenciais exclusivos no Centro Médico Monte Sinai e consultas online. Dê o primeiro passo para assumir o controle da sua transformação.</p>
+            <a href="https://api.whatsapp.com/send/?phone=32988452559&text&type=phone_number&app_absent=0&utm_source=ig" class="btn-cta" target="_blank">Quero Mudar de Método Agora</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Vinicius Alves | Nutricionista. Todos os direitos reservados.</p>
+            <p style="margin-top: 8px; font-size: 0.8rem; opacity: 0.5;">Av. Presidente Itamar Franco, 4001 - Centro Médico Monte Sinai, Torre OESTE - Sala 704, Juiz de Fora - MG, 36033-318</p>
+        </div>
+    </footer>
+
+</body>
+</html>
